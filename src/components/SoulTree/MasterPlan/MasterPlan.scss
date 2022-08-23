@@ -1,0 +1,66 @@
+@import "../../../styles/variables";
+
+.MasterPlan {
+  &__label {
+    font-weight: $fw100;
+    text-transform: uppercase;
+    font-family: $fontBarlow;
+    letter-spacing: 3px;
+
+    @media (min-width: $md) {
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+
+  &__info {
+    font-weight: $fw700;
+    text-transform: lowercase;
+  }
+}
+
+.ulDivider {
+  position: relative;
+
+  &::after {
+    width: 2px;
+    height: 65%;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: 0 auto;
+    transform: translateX(-10px);
+    background: $black02;
+
+    @media (min-width: $lg) {
+      width: 4px;
+      height: 50%;
+      transform: translateX(-20px);
+    }
+  }
+}
+
+//  MasterPlanDOwnloadItems
+.MasterPlanDOwnloadItems {
+  &__icon {
+    width: 30px;
+    height: 30px;
+
+    @media (min-width: $lg) {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  &__downloadIcon {
+    width: 20px;
+    height: 20px;
+
+    @media (min-width: $lg) {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

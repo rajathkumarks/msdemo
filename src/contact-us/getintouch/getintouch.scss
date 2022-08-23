@@ -1,0 +1,10 @@
+.getintouch {
+  position: fixed;
+  width: 160px;
+  top: calc(50vh - 18px);
+  transform: rotate(-90deg);
+  border-radius: 4px 4px 0 0;
+  right: -62px;
+  height: 36px;
+  z-index: 999;
+}

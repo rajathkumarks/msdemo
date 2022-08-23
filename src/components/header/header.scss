@@ -1,0 +1,107 @@
+.section-header {
+  height: 5rem;
+  padding: 1rem 0;
+  animation-name: expanding;
+  animation-duration: 700ms;
+  z-index: 990;
+  position: fixed;
+  top: 0;
+  .logo {
+    background: url("../../images/logo-sq.svg") no-repeat 0 0 var(--color-black);
+    width: 130px;
+    height: 120px;
+    margin: 0;
+    background-size: 90px 90px;
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    background-position: center;
+  }
+
+  .item-link-menu {
+    position: absolute;
+    top: -10rem;
+    opacity: 0;
+    transition: all ease 700ms;
+  }
+
+  .link-wrapper {
+    position: relative;
+    &:hover {
+      .item-link-menu {
+        opacity: 1;
+        top: 3rem;
+      }
+    }
+  }
+
+  .icon {
+    path {
+      stroke: var(--color-white);
+    }
+  }
+
+  .extra-links {
+    transition: max-width ease 500ms;
+    max-width: 500px;
+    overflow: hidden;
+    &.hide {
+      max-width: 0;
+    }
+  }
+
+  .item-link {
+    font-size: 0.875rem;
+    text-decoration: none;
+    margin-left: 2rem;
+    transition: all 150ms;
+    flex: none;
+  }
+
+  .separator-v {
+    width: 2px;
+    margin-left: 2rem;
+    height: 20px;
+    background: linear-gradient(
+      to right,
+      var(--color-primary-1),
+      var(--color-primary-2)
+    );
+  }
+
+  .v-line {
+    width: 100%;
+    height: 1px;
+  }
+
+  .app-btn--hollow--white {
+    margin-left: 2rem;
+  }
+
+  .icon-toggle-nav {
+    cursor: pointer;
+    width: 54px;
+    height: 54px;
+    display: inline-block;
+    top: 0;
+    position: relative;
+    transition: all ease-in-out 700ms;
+    margin: 0 0.25rem;
+    background-image: url(../../images/hamburger-menu-dots.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    &.icon-close {
+      background-image: url(../../images/hamburger-menu-close.svg);
+    }
+  }
+}
+
+@keyframes expanding {
+  from {
+    top: -5rem;
+  }
+  to {
+    top: 0;
+  }
+}

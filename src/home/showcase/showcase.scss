@@ -1,0 +1,32 @@
+.section-showcase {
+  .name {
+    font-size: 2.625rem;
+  }
+
+  .project-row {
+    &:nth-child(odd) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .feature-label {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+  }
+
+  .feature-name {
+    font-size: 1.125rem;
+    opacity: 0.6;
+  }
+
+  .desc {
+    font-size: 1.125rem;
+  }
+
+  .separator {
+    min-width: 1px;
+    min-height: 2rem;
+    margin: auto 2rem;
+  }
+}

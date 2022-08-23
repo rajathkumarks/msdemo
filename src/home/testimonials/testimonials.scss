@@ -1,0 +1,83 @@
+.section-testimonials {
+  overflow: hidden;
+
+  .tile {
+    padding: 2rem;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.1);
+  }
+
+  .test-col-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .quotes {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline-block;
+    background: url(../../images/quotes.svg) no-repeat;
+    background-size: 100%;
+    position: absolute;
+    left: -10px;
+    bottom: 4rem;
+  }
+
+  .tagline {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+
+  .text {
+    font-size: 1.125rem;
+  }
+
+  .desc {
+    font-size: 18px;
+  }
+
+  .name {
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+
+  .designation {
+    font-size: 1.125rem;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    border: 1px solid var(--color-primary-1);
+    border-radius: 50%;
+    margin-right: 1rem;
+    cursor: pointer;
+    &.active-dot {
+      background: var(--color-primary-1);
+    }
+  }
+
+  .arrow-next {
+    background: url(../../images/arrow-next.svg) no-repeat;
+    width: 26px;
+    height: 14px;
+    cursor: pointer;
+  }
+
+  .css-1fzpoyk {
+    height: auto;
+    &:nth-child(1) {
+      width: 0;
+      opacity: 0 !important;
+    }
+    &:nth-child(2) {
+      width: 80%;
+      transform: translateY(-50%) translateX(-60%) scale(1) !important;
+    }
+    &:last-child {
+      transform: translateY(-50%) translateX(-45%) scale(0.5) !important;
+      width: 80%;
+      opacity: 1 !important;
+    }
+  }
+}

@@ -1,0 +1,104 @@
+@mixin btn($bg, $border) {
+  padding: 0 2rem;
+  height: 48px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  font-family: "Barlow", sans-serif;
+  text-align: center;
+  border-radius: 4px;
+  background: $bg;
+  border: 2px solid $border;
+  transition: all ease-in 200ms;
+}
+
+@mixin btn-text($bg) {
+  font-family: "bai jamjuree", sans-serif;
+  background: $bg;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.app-btn--big {
+  font-size: 1.5rem !important;
+  height: 56px !important;
+  padding: 0 3rem !important;
+}
+
+.app-btn--small {
+  font-size: 0.875rem !important;
+  height: 48px !important;
+  padding: 0 1.5rem !important;
+}
+
+.app-btn {
+  &--solid--primary {
+    @include btn(var(--color-dark-1), var(--color-dark-1));
+    .app-btn-text {
+      @include btn-text(
+        linear-gradient(
+          to right,
+          var(--color-primary-1) 0%,
+          var(--color-primary-2) 100%
+        )
+      );
+    }
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 3px 3px 1px 1px var(--color-light-1);
+    }
+  }
+
+  &--hollow--dark {
+    @include btn(transparent, var(--color-dark-1));
+    .app-btn-text {
+      @include btn-text(var(--color-dark-1));
+    }
+    // &:hover {
+    //   background: var(--color-dark-1);
+    //   .app-btn-text {
+    //     background: linear-gradient(
+    //       to right,
+    //       var(--color-primary-1) 0%,
+    //       var(--color-primary-2) 100%
+    //     );
+    //   }
+    // }
+  }
+
+  &--hollow--white {
+    @include btn(transparent, var(--color-white));
+    .app-btn-text {
+      @include btn-text(var(--color-white));
+    }
+    // &:hover {
+    //   border-color: var(--color-primary-2);
+    //   .app-btn-text {
+    //     background: linear-gradient(
+    //       to right,
+    //       var(--color-primary-1) 0%,
+    //       var(--color-primary-2) 100%
+    //     );
+    //   }
+    // }
+  }
+
+  &--hollow--primary {
+    @include btn(transparent, var(--color-primary-2));
+    .app-btn-text {
+      @include btn-text(
+        linear-gradient(
+          to right,
+          var(--color-primary-1) 0%,
+          var(--color-primary-2) 100%
+        )
+      );
+    }
+    // &:hover {
+    //   border-color: var(--color-white);
+    //   .app-btn-text {
+    //     background: var(--color-white);
+    //   }
+    // }
+  }
+}

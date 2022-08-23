@@ -1,0 +1,42 @@
+.modal-content {
+  border-radius: 3px;
+  outline: 0;
+  padding: 36px;
+
+  .form-label {
+    font-weight: 600;
+    line-height: 14px;
+    color: $black17;
+  }
+
+  .form-group {
+    @media (min-width: $mmd) {
+      margin-bottom: 2.3rem;
+    }
+  }
+
+  .close,
+  .close span {
+    color: #0b0223 !important;
+    text-shadow: none;
+    font-size: 50px;
+    opacity: 1;
+  }
+
+  .modal-header {
+    padding-top: 4px;
+    margin-bottom: 12px;
+  }
+
+  .modal-header,
+  .modal-body,
+  .modal-footer {
+    border: none !important;
+  }
+
+  .modal-footer {
+    .react-reveal {
+      width: 100%;
+    }
+  }
+}

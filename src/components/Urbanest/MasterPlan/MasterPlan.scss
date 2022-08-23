@@ -1,0 +1,69 @@
+@import "../../../styles/variables";
+
+.Block {
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 1);
+}
+.Block:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+}
+.Shadow {
+  filter: blur(2px);
+  opacity: 0.5;
+}
+
+.st0 {
+  fill: #444;
+}
+.st1 {
+  fill: #f2f2f2;
+}
+.st2 {
+  fill: #f7f7f7;
+  stroke: #e6e6e6;
+  stroke-width: 0.25;
+  stroke-linejoin: round;
+}
+.st3 {
+  fill: none;
+  stroke: #e6e6e6;
+  stroke-width: 0.25;
+  stroke-linejoin: round;
+}
+.st4 {
+  fill: #fff;
+  stroke: #e6e6e6;
+  stroke-width: 0.25;
+  stroke-linejoin: round;
+}
+.st5 {
+  fill: #fff;
+  stroke: #e6e6e6;
+  stroke-linejoin: round;
+}
+.st6 {
+  fill: #fff;
+}
+.st7 {
+  fill: #fff;
+  stroke: #000;
+  stroke-width: 0.25;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.st8 {
+  fill: #3b3b3b;
+}
+.st9 {
+  fill: #fff;
+  stroke: #000;
+  stroke-width: 0.25;
+  stroke-linejoin: round;
+}
+.st10 {
+  fill: none;
+  stroke: #000;
+  stroke-width: 0.25;
+  stroke-miterlimit: 10;
+}

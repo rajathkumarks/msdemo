@@ -1,0 +1,96 @@
+@import "../../../styles/variables";
+
+.bg-lightGray {
+  background: $lightGray;
+}
+
+.GalleryTabs {
+  // padding-bottom: 4rem;
+  // RECORD AUDIO BASED CHANGE
+  padding-bottom: 2.5rem;
+
+  @media (min-width: $lg) {
+    padding-bottom: 3.5rem;
+  }
+
+  .nav-tabs {
+    border-bottom: 0;
+    margin-bottom: 24px;
+  }
+
+  .nav-item {
+    &.nav-link {
+      position: relative;
+      border: transparent;
+      background: transparent;
+      padding: 0.5rem 2rem 1rem 0.5rem;
+
+      .-title {
+        color: $black03 !important;
+        padding: 0 !important;
+      }
+
+      &.active .-title {
+        color: $black !important;
+        padding: 0 !important;
+      }
+
+      &::after,
+      &.active::after {
+        left: 10px;
+        position: absolute;
+        bottom: 8px;
+        content: "";
+        border-radius: 50px;
+        display: inline-block;
+        width: 40px;
+        height: 4px;
+        transition: $transition6;
+      }
+
+      &::after {
+        background: $transparent;
+
+        @media (min-width: $lg) {
+          height: 6px;
+          bottom: 12px;
+          left: 14px;
+        }
+      }
+
+      &.active {
+        &::after {
+          background: $black;
+
+          @media (min-width: $lg) {
+            left: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.GalleryTabs-Container {
+  .tab-content {
+    width: 100%;
+  }
+}
+
+.GalleryImage {
+  // height: 100%;
+  object-fit: cover;
+  // height    : 90vh;
+  // RECORD AUDIO BASED CHANGE
+  height: 310px;
+
+  @media (min-width: $lg) {
+    // height: 70vh;
+    // RECORD AUDIO BASED CHANGE
+    height: 90vh;
+  }
+
+  @media (min-width: $extrXs) {
+    height: 85vh;
+  }
+}

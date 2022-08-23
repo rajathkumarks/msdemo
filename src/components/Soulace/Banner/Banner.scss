@@ -1,0 +1,60 @@
+@import "../../../styles/variables";
+
+// BANNER IMAGE
+.BannerImage {
+  width: 100%;
+  right: 0;
+  filter: drop-shadow(0 24px 24px rgba(0, 0, 0, 0.08));
+  height: 100%;
+  bottom: 0;
+  object-fit: contain;
+
+  @media (max-width: $slg) {
+    min-height: 250px;
+  }
+
+  @media (min-width: $xlg) {
+    padding-left: 160px;
+  }
+
+  @media (min-width: $lg) {
+    position: absolute;
+    transform: translateY(0);
+    // min-height  : 800px;
+    height: auto;
+    padding-left: 120px;
+  }
+
+  @media (min-width: $xlg) {
+    padding-left: 0;
+    transform: translateY(180px);
+    height: 80%;
+  }
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.md-container-wrap {
+  z-index: 5;
+
+  img {
+    @media (max-width: $md) {
+      // width: 100%;
+      // RECORD AUDIO BASED CHANGE
+      height: 290px;
+      object-fit: cover;
+    }
+  }
+}
+
+.-banner-image {
+  @media (min-width: $md) {
+    padding-bottom: 11rem;
+  }
+
+  @media (min-width: $extrLg) {
+    width: 140%;
+  }
+}

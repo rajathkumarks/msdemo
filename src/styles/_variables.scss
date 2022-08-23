@@ -1,0 +1,120 @@
+//Font Colors
+
+$app-colors: (
+  black: #000,
+  white: #fff,
+  dark-1: #151414,
+  dark-2: #2a2829,
+  dark-3: #363133,
+  dark-4: #181617,
+  light-1: #dedede,
+  light-2: #7f7d7e,
+  light-3: #898989,
+  primary-1: #ffd542,
+  primary-2: #e8a111,
+);
+
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+
+  //Darks
+  --color-dark-1: #151414;
+  --color-dark-2: #2a2829;
+  --color-dark-3: #363133;
+  --color-dark-4: #181617;
+
+  //lights{
+  --color-light-1: #dedede;
+  --color-light-2: #7f7d7e;
+  --color-light-3: #898989;
+
+  //Primary
+  --color-primary-1: #ffd542;
+  --color-primary-2: #e8a111;
+  --box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.12);
+}
+
+$transparent: transparent;
+$white: white;
+$white04: rgba($white, 0.4);
+$black: black;
+$black17: #181617;
+$orange: #cb8800;
+$lightOrange: rgba($orange, 0.2);
+$lightGray: #fafde7;
+$darkGray: #dee2e6;
+$black08: rgba($black, 0.8);
+$black02: rgba($black, 0.2);
+$black03: rgba($black, 0.3);
+$white08: rgba($white, 0.8);
+$linearGradient: linear-gradient(
+    to right,
+    white,
+    rgba(255, 255, 255, 0.75),
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0)
+  ),
+  linear-gradient(
+    to top,
+    white,
+    rgba(255, 255, 255, 0.75),
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0)
+  );
+
+$linearGradient1: linear-gradient(
+    to right,
+    white,
+    rgba(255, 255, 255, 0.75),
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0)
+  ),
+  linear-gradient(
+    to bottom,
+    white,
+    rgba(255, 255, 255, 0.75),
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0)
+  );
+// TRANSITION
+$transition: 0.4s all ease;
+$transition6: all 600ms ease 0s;
+
+// MEDIA
+
+$ssm: 767px;
+$smd: 991px;
+$slg: 1365px;
+
+$sm: 768px;
+$md: 992px;
+$mmd: 1024px;
+$lg: 1366px;
+$xlg: 1440px;
+$extrXs: 1536px;
+$extrSm: 1600px;
+$extrLg: 1920px;
+
+// FONT FAMILY
+$fontBarlow: "Barlow", sans-serif;
+// $fontOpenSans: "Barlow",sans-serif;
+// $fontBai:  "Bai Jamjuree",sans-serif;
+// RECORD AUDIO BASED CHANGE
+$fontLora: "Lora", serif;
+
+// FONTWEIGHT
+$fw900: 900;
+$fw700: 700;
+$fw600: 600;
+$fw500: 500;
+$fw100: 100;
+$fwBold: bold;
+
+$boxShadow: 0 0 7px 1px rgba(0, 0, 0, 0.12);
+$boxShadowDark: 0 0 8px 4px rgba(0, 0, 0, 0.2);
+$boxShadowDarkLg: 0 24px 24px rgba(0, 0, 0, 0.8);

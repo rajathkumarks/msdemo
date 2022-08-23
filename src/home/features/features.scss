@@ -1,0 +1,80 @@
+.section-features {
+  .sub-heading {
+    position: absolute;
+    z-index: 100;
+    width: calc(50% - 2rem);
+  }
+
+  .features {
+    height: calc(100vh - 8rem);
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .powered {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+  }
+
+  .logo {
+    width: auto;
+    height: 40px;
+  }
+
+  .logo-img {
+    max-height: 100%;
+  }
+
+  .name {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .desc {
+    font-size: 1.125rem;
+    font-weight: 400;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+}
+
+// Extra Small and Small devices (phones, xs sm, 767px and up)
+@media screen and (max-device-width: 767px) {
+  .section-features {
+    .sub-heading {
+      position: relative;
+      width: 100%;
+    }
+
+    .features {
+      display: flex;
+      overflow-x: auto !important;
+      overflow-y: hidden !important;
+      height: auto !important;
+    }
+
+    .feature {
+      height: auto;
+      min-width: 90% !important;
+      margin: 0;
+      margin-right: 2rem;
+      align-items: flex-start;
+      .col {
+        padding: 0;
+        .main-img {
+          max-width: 100%;
+        }
+      }
+      .col-summary {
+        order: 2;
+        margin-top: 2rem;
+      }
+      .col-img {
+        order: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+.ArrowButtons {
+  position: relative;
+}
+
+.ArrowButtonBlock {
+  background: $white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate(-60px, -40vh);
+  z-index: 9;
+  width: auto;
+
+  @media (max-width: $sm) {
+    position: relative;
+    margin: 12px auto;
+    left: 0;
+    right: 0;
+    transform: translate(0, 0);
+  }
+
+  @media (min-width: $extrLg) {
+    transform: translate(-60px, -24vh);
+  }
+
+  &__Arrow {
+    padding: 17px;
+    transition: $transition6;
+
+    &:hover {
+      transition: $transition6;
+      transform: scale(1.2);
+    }
+  }
+
+  // &__ArrowPrev,
+  // &__ArrowNext {
+  // }
+}
+
+.swiper-pagination-bullet {
+  width: 9px;
+  height: 9px;
+  background: $transparent;
+  border: 1px solid $black08;
+  text-align: center;
+  padding: 5px;
+  margin: 0 6px;
+  opacity: 1;
+
+  &.swiper-pagination-bullet-active {
+    background: $black08;
+    border: 1px solid $black08;
+    opacity: 1;
+  }
+}
+
+.bg-trans {
+  .swiper-pagination-bullet {
+    background: $transparent;
+    border: 1px solid $white;
+
+    &.swiper-pagination-bullet-active {
+      background: $white;
+      border: 1px solid $white;
+    }
+  }
+}

@@ -1,0 +1,124 @@
+// CulbConnect
+@import "../../../styles/variables";
+
+$height553px: 553px;
+$height400px: 400px;
+$height70vh: 70vh;
+$height638px: 638px;
+$height500px: 500px;
+
+.ClubconnectScroll {
+  background: url("../../../images/SoulTree/ArchitecturalImage.png");
+  height: 100vh;
+  // height            : 140vh;
+  background-size: cover;
+  width: 100%;
+  overflow: hidden;
+}
+
+.ExpTextBackground {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background: $black;
+  color: $white;
+  mix-blend-mode: multiply;
+  z-index: 2;
+  font-size: 100px;
+
+  img {
+    position: relative;
+    max-width: 90%;
+  }
+}
+
+.mdOverflowHidden {
+  overflow: hidden;
+}
+
+// -club-card-block
+.-club-card-block {
+  position: relative;
+
+  .-image-block {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      text-align: center;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      // height    : $height70vh;
+      // background: linear-gradient(to top, rgba($black, 0.7), rgba($black, 0));
+      z-index: 0;
+      height: 30vh;
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0.01)
+      );
+    }
+
+    img,
+    .-image-block {
+      max-height: 400px !important;
+      height: 400px;
+      width: 100%;
+      object-fit: cover;
+      transition: $transition6;
+
+      @media (max-width: $sm) {
+        max-height: 320px !important;
+        height: 320px;
+      }
+    }
+  }
+
+  .-club-block {
+    position: absolute;
+    bottom: 0;
+    padding: 12px;
+  }
+
+  .-content-block {
+    position: relative;
+    z-index: 3;
+    bottom: 0;
+  }
+
+  .-title {
+    color: $white !important;
+  }
+
+  .-desc {
+    font-size: 16px;
+    line-height: 26px;
+    color: $white08 !important;
+  }
+}
+
+.bg-linearGradient1 {
+  &::before {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    content: "";
+    // background    : $linearGradient1;
+    background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0.06)
+    );
+    z-index: 1;
+    height: 100vh;
+    padding: 0 !important;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+  }
+}

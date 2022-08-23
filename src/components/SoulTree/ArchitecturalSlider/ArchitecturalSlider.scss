@@ -1,0 +1,100 @@
+@import "../../../styles/variables";
+
+// @media (max-width: $ssm) {}
+// @media (max-width: $mmd) {}
+// color: $white;
+
+.ArchitecturalSlider {
+  position: relative;
+  padding-top: 0 !important;
+  padding-bottom: 14rem !important;
+
+  @media (max-width: $mmd) {
+    padding-bottom: 0.5rem !important;
+  }
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    @media (max-width: $mmd) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .-image-block {
+    @media (max-width: $mmd) {
+      width: 100%;
+      left: 0;
+      right: 0;
+    }
+
+    img {
+      @media (max-width: $mmd) {
+        width: 100%;
+      }
+
+      @media (min-width: $extrLg) {
+        // width: 160%;
+        width: 130%;
+      }
+    }
+  }
+
+  .-architech-co-block {
+    position: relative;
+
+    &__inner {
+      // position  : absolute;
+      right: 0;
+      z-index: 9;
+      background: $white;
+      width: 100%;
+      padding: 40px 0 40px 40px;
+      transform: translateX(-50%);
+
+      @media (max-width: $mmd) {
+        padding: 20px 40px;
+        position: relative;
+        transform: translateX(0);
+      }
+
+      @media (min-width: $lg) {
+        width: 110%;
+      }
+
+      @media (min-width: $extrSm) {
+        transform: translateX(20%);
+        // max-width: 723px;
+        max-width: 530px;
+      }
+    }
+  }
+
+  .ArrowButtonBlock {
+    background: $transparent;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    transform: translate(0, 12vh);
+
+    @media (max-width: $md) {
+      transform: translate(0, 2vh);
+    }
+  }
+
+  .swiper-pagination {
+    &.swiper-pagination-Architech {
+      position: absolute;
+      left: 76px;
+      display: flex;
+      align-items: center;
+
+      @media (max-width: $mmd) {
+        display: none;
+      }
+    }
+  }
+}

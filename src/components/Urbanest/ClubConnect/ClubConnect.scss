@@ -1,0 +1,105 @@
+@import "../../../styles/variables";
+
+.ClubhouseWrapper {
+  padding: {
+    top: 3rem;
+    bottom: 7rem;
+  }
+}
+
+.ClubhouseWrapper__info {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+
+  @media (max-width: $mmd) {
+    flex-direction: column;
+  }
+
+  @media (min-width: $md) {
+    align-items: center;
+  }
+}
+
+.heroImageContent {
+  @media (min-width: $md) {
+    position: absolute;
+    left: 0;
+    top: 4.2rem;
+    z-index: 1;
+  }
+}
+
+.ClubhouseFigureWrap {
+  overflow: hidden;
+
+  @media (max-width: $mmd) {
+    img {
+      height: 350px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  @media (min-width: $md) {
+    padding-left: 8.8rem;
+  }
+}
+
+.scrollMainHeading {
+  // font-family: $fontLora;
+  font-weight: $fw900;
+  font-size: 24px;
+  line-height: 34px;
+
+  @media (min-width: $md) {
+    font-size: 58px;
+    line-height: 72px;
+    text-transform: uppercase;
+  }
+}
+
+// OLD VERSION
+
+// CulbConnect
+// .mask-bg {
+//   height           : 100vh;
+//   background-image : url("../../../images/Urbanest/RecreationZone/TranquilCourtImageSmall.png");
+//   background-repeat: no-repeat;
+//   background-size  : 100%;
+// }
+
+// .mask {
+//   background-image   : url("../../../images/Urbanest/Clubconnect-landscape.svg");
+//   background-repeat  : no-repeat;
+//   background-position: center;
+
+//   &.hiding {
+//     animation-fill-mode: forwards;
+//     animation-duration : 3s;
+//     animation-name     : hiding;
+//   }
+// }
+
+// @keyframes hiding {
+//   0% {
+//     opacity        : 1;
+//     background-size: 100%;
+//   }
+
+//   40% {
+//     opacity        : 1;
+//     background-size: 100%;
+//   }
+
+//   100% {
+//     opacity        : 0;
+//     background-size: 5000%;
+//   }
+// }
+
+// @media screen and (max-device-width: 767px) {
+//   .mask {
+//     background-image: url("../../../images/Urbanest/Clubconnect-portrait.svg");
+//   }
+// }

@@ -1,0 +1,67 @@
+@import "../../../styles/variables";
+
+// BANNER IMAGE
+
+$height100vh: 100vh;
+$height90vh: 90vh;
+$height70vh: 70vh;
+$height84vh: 84vh;
+
+.ProjectBanner-bg {
+  .ProjectBanner {
+    align-items: center;
+    display: flex;
+    z-index: 9;
+    position: relative;
+  }
+
+  .-bgShadow {
+    height: 100%;
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    top: 0;
+
+    @media (min-width: $sm) {
+      top: 60px;
+    }
+
+    @media (min-width: $mmd + 1) {
+      top: 80px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: $height100vh;
+      z-index: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: $linearGradient,
+        url("../../../images/Project/BannerImage.png") no-repeat;
+      background-size: cover;
+
+      @media (min-width: $lg) {
+        background-size: contain;
+      }
+    }
+  }
+}
+
+.ProjectBanner-bg,
+.ProjectBanner-bg .ProjectBanner,
+.ProjectBanner-bg .ProjectBanner .-bgShadow,
+.ProjectBanner-bg .ProjectBanner .-bgShadow::after {
+  height: $height84vh;
+
+  @media (min-width: $sm) {
+    height: $height90vh;
+  }
+
+  @media (min-width: $mmd + 1) {
+    height: $height100vh;
+  }
+}

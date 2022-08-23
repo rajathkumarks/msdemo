@@ -1,0 +1,38 @@
+.section-contact-main {
+  .col-left {
+    .white-tile {
+      background: url(../../images/contact-us/pattern-3.png) var(--color-white);
+      background-position: left;
+      background-repeat: no-repeat;
+      box-shadow: var(--box-shadow);
+    }
+  }
+  .col-right {
+    .white-tile {
+      background: url(../../images/contact-us/pattern-4.png) var(--color-white);
+      background-position: right;
+      background-repeat: no-repeat;
+      box-shadow: var(--box-shadow);
+    }
+  }
+
+  .dark-tile {
+    background: url(../../images/contact-us/pattern-1.png),
+      url(../../images/contact-us/pattern-2.png), var(--color-black);
+    background-position: right, left 0;
+    background-repeat: no-repeat, no-repeat;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .summary {
+    font-size: 1.25rem;
+  }
+
+  .desc {
+    font-size: 1.125rem;
+    opacity: 0.8;
+  }
+}

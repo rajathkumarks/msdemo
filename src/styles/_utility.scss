@@ -1,0 +1,59 @@
+@each $key, $val in $app-colors {
+  .fc-#{$key} {
+    color: $val !important;
+  }
+  .bg-#{$key} {
+    background: $val !important;
+  }
+}
+
+.fc-primary {
+  color: var(--color-primary-1);
+  background: linear-gradient(
+    to right,
+    var(--color-primary-1) 0%,
+    var(--color-primary-2) 100%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+//Font Weight
+.fw-bold {
+  font-weight: 700;
+}
+
+.fw-light {
+  font-weight: 300;
+}
+
+//Font family
+
+.ff-barlow {
+  font-family: "Barlow", sans-serif !important;
+}
+
+.ff-poppins {
+  font-family: "Poppins", sans-serif !important;
+}
+
+.ff-opensans {
+  font-family: "Open Sans", sans-serif !important;
+}
+
+.ff-bai {
+  font-family: "Bai Jamjuree", sans-serif !important;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.inView {
+  //filter: blur(0);
+  top: 0;
+}
+
+.outView {
+  //filter: blur(8px);
+  top: 150px;
+}

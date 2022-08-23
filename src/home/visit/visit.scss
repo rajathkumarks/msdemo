@@ -1,0 +1,16 @@
+.section-visit {
+  .contacts {
+    font-size: 1.5rem;
+  }
+
+  .separator {
+    width: 3px;
+    background: linear-gradient(
+      to bottom,
+      var(--color-primary-2) 0%,
+      var(--color-primary-1) 100%
+    );
+    height: 100%;
+    display: inline-block;
+  }
+}

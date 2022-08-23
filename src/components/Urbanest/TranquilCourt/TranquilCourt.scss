@@ -1,0 +1,27 @@
+@import "../../../styles/variables";
+
+// @media (max-width: $ssm) {}
+// @media (min-width: $mmd) {}
+// color: $white;
+
+.TranquilCourtImage {
+  // @media (max-width: $ssm) {
+  // }
+  &.-RecreationZone {
+    &::after {
+      display: none;
+    }
+
+    .TranquilCourt__imageLarge {
+      @media (min-width: $lg) {
+        height: 100vh;
+      }
+    }
+
+    .TranquilCourt__imageSmall {
+      @media (min-width: $mmd) {
+        transform: translate(-150px, -100px);
+      }
+    }
+  }
+}

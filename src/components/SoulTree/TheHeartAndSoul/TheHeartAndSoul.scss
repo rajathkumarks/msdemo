@@ -1,0 +1,129 @@
+@import "../../../styles/variables";
+
+.TheHeartAndSoul {
+  @media (max-width: $ssm) {
+    display: flex;
+    flex-direction: column-reverse;
+    // RECORD AUDIO BASED CHANGE
+    padding: 0 !important;
+  }
+
+  &__content-block {
+    @media (max-width: $ssm) {
+      height: 100%;
+      transform: translate(0, 0);
+      // padding  : 60px 30px;
+      // RECORD AUDIO BASED CHANGE
+      padding: 40px 30px;
+    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+    background: $black;
+    vertical-align: middle;
+    height: 90vh;
+    transform: translate(0, 20px);
+
+    @media (min-width: $mmd) {
+      transform: translate(-20px, 20px);
+    }
+
+    @media (min-width: $lg) {
+      transform: translate(-50px, 20px);
+    }
+
+    @media (min-width: $extrLg) {
+      transform: translate(-170px, 20px);
+    }
+  }
+
+  &__title,
+  &__link {
+    color: $white;
+  }
+
+  &__link {
+    position: relative;
+
+    &::after {
+      width: 0;
+      height: 3px;
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      background: $white;
+      transform: scaleX(0);
+      transition: $transition;
+      transform-origin: left;
+    }
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &__link:hover::after {
+    width: 40%;
+    transform: scaleX(1);
+  }
+
+  &__desc {
+    color: $white08;
+  }
+
+  &__image {
+    object-fit: cover;
+    overflow: hidden;
+    right: 0;
+
+    @media (max-width: $ssm) {
+      // height: 60vh;
+      // RECORD AUDIO BASED CHANGE
+      height: 310px;
+      width: 100%;
+      left: 0;
+      position: relative;
+    }
+
+    @media (min-width: $sm) {
+      position: absolute;
+      top: 0;
+      z-index: -1;
+      height: 95vh;
+      width: 82%;
+    }
+  }
+
+  &__image-block {
+    @media (max-width: $ssm) {
+      position: relative;
+    }
+  }
+}
+
+.videoIconImage {
+  position: absolute;
+  top: 40%;
+  z-index: 1;
+  overflow: hidden;
+  height: 60px;
+  width: 60px;
+  right: 40%;
+  cursor: pointer;
+  background: $white08;
+  padding: 16px 16px 18px 20px;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 50%;
+  transition: $transition;
+
+  &:hover {
+    background: $white;
+    transition: $transition;
+    transform: scale(1.1);
+  }
+}

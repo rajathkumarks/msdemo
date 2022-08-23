@@ -1,0 +1,23 @@
+@import "../../../styles/variables";
+
+.GalleryTabs {
+  &--black {
+    .nav-item {
+      &.nav-link {
+        .-title {
+          color: $white04 !important;
+        }
+
+        &.active .-title {
+          color: $white !important;
+        }
+
+        &.active {
+          &::after {
+            background: $white;
+          }
+        }
+      }
+    }
+  }
+}

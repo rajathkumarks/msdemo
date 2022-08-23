@@ -1,0 +1,120 @@
+@import "../../../styles/variables";
+
+.AccordionHeading,
+.VerticalDivider {
+  position: relative;
+}
+
+.Accordion {
+  .cardHeader {
+    padding: 1rem 0;
+    cursor: pointer;
+  }
+
+  &__list {
+    li {
+      list-style-type: none !important;
+    }
+  }
+
+  .-desc {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      float: right;
+      top: 14px;
+      left: 0;
+      display: flex;
+      align-items: center;
+      vertical-align: middle;
+      background: $black;
+      bottom: 50%;
+      transform: translate(-18px, 0);
+      border-radius: 50%;
+    }
+  }
+}
+
+.PlusMinus {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  float: right;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  transform: translate(-30px, 100%);
+}
+
+.VerticalDivider {
+  padding-bottom: 1.5rem;
+
+  @media (min-width: $lg) {
+    padding-bottom: 5rem;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 40px;
+    float: right;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    transform: translate(15px, -90%);
+
+    @media (min-width: $lg) {
+      background: $black;
+    }
+  }
+}
+
+.card {
+  border-left: 0;
+  border-right: 0;
+  border-radius: 0;
+}
+
+.cardHeader {
+  background-color: $transparent;
+  border-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.Specifications {
+  &--black {
+    * {
+      color: $white;
+      background: transparent;
+    }
+
+    .-desc {
+      &::before {
+        content: "";
+        background: $white;
+      }
+    }
+  }
+
+  .VerticalDivider {
+    &::after {
+      @media (min-width: $lg) {
+        background: $white;
+      }
+    }
+  }
+
+  .card {
+    border-bottom: 1px solid #ccc !important;
+  }
+}

@@ -1,0 +1,68 @@
+.section-contact-form {
+  .content {
+    margin-top: 5rem;
+  }
+
+  .form-bg {
+    width: 365px;
+    height: 591px;
+    background: url(../../images/contact-us/hero-contact.jpg);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  .form-container {
+    box-shadow: var(--box-shadow);
+    min-width: calc(100% - 365px);
+  }
+
+  .heading {
+    font-size: 3.125rem;
+    line-height: 100%;
+  }
+
+  .msg-text {
+    font-size: 2rem;
+  }
+
+  .menu-head {
+    font-size: 1.125rem;
+  }
+
+  .menu-item {
+    font-size: 0.875rem;
+  }
+
+  label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  input[type="text"] {
+    border: none;
+    border-bottom: 1px solid var(--color-light-2);
+    outline: none;
+    width: 100%;
+  }
+}
+
+@media screen and (max-device-width: 767px) {
+  .section-contact-form {
+    background: url(../../images/contact-us/hero-contact.jpg);
+    background-position: top right;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100% auto;
+    .content {
+      margin-top: 12rem;
+    }
+    .form-container {
+      width: 100% !important;
+      padding: 2rem !important;
+    }
+    .app-btn--solid--primary {
+      width: 100%;
+    }
+  }
+}

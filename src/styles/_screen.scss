@@ -1,0 +1,119 @@
+// Extra Small and Small devices (phones, xs sm, 767px and up)
+@media screen and (max-device-width: 767px) {
+  :root {
+    font-size: 12px;
+  }
+
+  .section-showcase {
+    .sub-heading {
+      text-align: left !important;
+    }
+    .project {
+      text-align: left !important;
+    }
+    .features {
+      width: 100% !important;
+      overflow: auto;
+      white-space: nowrap;
+    }
+    .app-btn--solid--primary {
+      width: 100% !important;
+    }
+    .desc {
+      width: 100% !important;
+    }
+  }
+
+  .section-blogs {
+    .blogs {
+      overflow-x: scroll !important;
+      flex-flow: nowrap !important;
+      margin: 0 !important;
+      display: flex;
+    }
+    .blog {
+      min-width: 90% !important;
+      margin: 0 !important;
+      margin-right: 2rem !important;
+    }
+    .app-btn--hollow--dark {
+      width: 100%;
+    }
+  }
+
+  .section-visit {
+    .app-btn--solid--primary {
+      width: 100%;
+    }
+    .number {
+      order: 2;
+      margin: 2rem 0;
+    }
+    .email {
+      order: 3;
+    }
+    .separator {
+      height: 3px !important;
+      width: 15px !important;
+    }
+    .contacts {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .section-footer {
+    .items {
+      border: none !important;
+    }
+  }
+
+  .section-testimonials {
+    .test-col-2 {
+      overflow-x: auto;
+      padding: 1rem;
+      display: flex;
+    }
+    .tile {
+      position: relative !important;
+      min-width: 90%;
+      margin-left: 1rem;
+    }
+  }
+}
+
+// Medium devices (tablets, md, 768px and up)
+@media screen and (min-device-width: 768px) and (max-device-width: 991px) {
+  :root {
+    font-size: clamp(12px, 1.25vw, 13px);
+  }
+}
+
+// Large devices (desktops, lg, 992px and up)
+@media screen and (min-device-width: 992px) and (max-device-width: 1199px) {
+  :root {
+    font-size: clamp(13px, 1.25vw, 14px);
+  }
+}
+
+// Large devices (desktops, lg, 1200px and up)
+@media screen and (min-device-width: 1200px) {
+  :root {
+    font-size: clamp(14px, 1.25vw, 16px);
+  }
+}
+
+// Medium devices (tablets, md, 768px and up)
+@media screen and (min-device-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
+    border: 2px solid var(--color-white);
+  }
+}

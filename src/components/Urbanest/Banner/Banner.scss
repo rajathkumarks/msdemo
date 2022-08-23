@@ -1,0 +1,10 @@
+@import "../../../styles/variables";
+
+// BANNER IMAGE
+.-banner-image-urbanest {
+  width: 100%;
+
+  @media (min-width: $md) {
+    padding-bottom: 11rem;
+  }
+}

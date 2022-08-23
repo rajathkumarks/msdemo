@@ -1,0 +1,139 @@
+@import "../../../styles/variables";
+
+// @media (max-width: $ssm) {}
+// @media (min-width: $mmd) {}
+// color: $white;
+
+$height553px: 553px;
+$height400px: 400px;
+$height70vh: 70vh;
+$height638px: 638px;
+$height500px: 500px;
+
+.SmartGreenMinimal {
+  position: relative;
+  margin-bottom: 5rem;
+  padding-bottom: 0 !important;
+
+  @media (max-width: $ssm) {
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  &__Container {
+    width: 100%;
+  }
+
+  &__Row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 76px;
+
+    @media (max-width: $sm) {
+      flex-direction: column;
+      padding: 0 0 0 15px;
+    }
+  }
+
+  &__Content {
+    width: 27%;
+    margin-right: 40px;
+
+    @media (max-width: $sm) {
+      padding: 10px 0 30px 20px;
+      width: 100%;
+    }
+  }
+
+  &__Slider {
+    width: 73%;
+
+    @media (max-width: $sm) {
+      width: 100%;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    bottom: 0;
+
+    @media (max-width: $sm) {
+      position: relative;
+      margin: 12px 0;
+    }
+  }
+}
+
+.SmartGreenMinimalSlider {
+  .swiper-wrapper {
+    align-items: flex-end;
+  }
+
+  .-image-block {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      text-align: center;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: $height70vh;
+      background: linear-gradient(to top, rgba($black, 0.7), rgba($black, 0));
+      z-index: 0;
+    }
+
+    img {
+      position: absolute;
+      bottom: 0;
+      object-fit: cover;
+    }
+
+    .-image-block,
+    img {
+      width: 100%;
+      transition: $transition6;
+      height: $height553px;
+
+      @media (max-width: $sm) {
+        height: $height400px;
+        position: relative;
+      }
+    }
+  }
+
+  .swiper-slide {
+    &.swiper-slide-active {
+      .-image-block,
+      img {
+        height: $height638px;
+        transition: $transition6;
+
+        @media (max-width: $sm) {
+          height: $height500px;
+        }
+      }
+    }
+  }
+
+  .-content-block {
+    position: absolute;
+    bottom: 0;
+    padding: 26px;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .-title {
+    color: $white;
+  }
+
+  .-desc {
+    font-size: 16px;
+    line-height: 26px;
+    color: $white08;
+  }
+}

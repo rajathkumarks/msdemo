@@ -1,0 +1,45 @@
+@import "../../../styles/variables";
+
+// GRASS PATTERN PANEL
+.GrassPattern {
+  width: 80px;
+  // RECORD AUDIO BASED CHANGE
+
+  @media (max-width: $slg) {
+    position: absolute;
+    right: 0;
+    height: auto;
+    top: 0;
+    width: 60px;
+  }
+
+  @media (max-width: $ssm) {
+    transform: rotate(180deg);
+  }
+}
+
+// BANNER IMAGE WRAPPER
+.md-banner-bgspace {
+  background: $lightGray;
+  height: 100%;
+  width: 58%;
+  position: absolute;
+  // margin-top: -5rem;
+
+  @media (max-width: $md) {
+    background: transparent;
+    right: 20px;
+  }
+
+  &__info {
+    position: absolute;
+    right: -5rem;
+    right: -2rem;
+    top: -193px;
+    z-index: 0;
+
+    @media (max-width: $mmd) {
+      z-index: -1;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@import "../../../styles/variables";
+
+.OtherProject {
+  position: relative;
+
+  &__Content {
+    background: $white;
+    padding: 40px 30px;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: $boxShadow;
+    // box-shadow    : $boxShadowDarkLg;
+
+    @media (min-width: $sm) {
+      position: absolute;
+      padding: 48px;
+      display: flex;
+      margin-top: auto;
+      margin-bottom: auto;
+      top: 50%;
+      bottom: 50%;
+      width: auto;
+      left: 14px;
+      height: fit-content;
+      // box-shadow: none;
+    }
+
+    @media (min-width: $mmd) {
+      max-width: 450px;
+    }
+  }
+
+  .-image {
+    width: 100%;
+  }
+
+  .-imageLogo {
+    width: 170px;
+    height: 30px;
+    object-fit: contain;
+
+    &--lg {
+      height: 90px;
+    }
+  }
+}

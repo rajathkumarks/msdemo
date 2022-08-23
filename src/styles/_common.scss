@@ -1,0 +1,276 @@
+// bgPattern
+.bgPattern {
+  position: relative;
+
+  &--left {
+    @media (min-width: $lg) {
+      background: linear-gradient(to left, $white 92%, $lightGray 10%);
+    }
+  }
+
+  &--right {
+    @media (min-width: $lg) {
+      background: linear-gradient(to right, $white 92%, $lightGray 10%);
+    }
+  }
+
+  &--bottom {
+    @media (min-width: $lg) {
+      background: linear-gradient(to bottom, $white 40%, $lightGray 20%);
+    }
+  }
+
+  &--black {
+    background: $black;
+  }
+
+  &--leftSquare,
+  &--rightSquare,
+  &--leftSquareFull {
+    &::after {
+      content: "";
+      position: absolute;
+      width: 35%;
+      height: 60%;
+      transform: translateY(120px);
+      z-index: -1;
+
+      @media (min-width: $lg) {
+        background: $lightGray;
+      }
+    }
+  }
+
+  &--rightSquare {
+    &::after {
+      right: 0;
+      top: 0;
+    }
+  }
+
+  &--leftSquare {
+    &::after {
+      left: 0;
+      top: 0;
+    }
+  }
+
+  &--leftSquareFull {
+    &::after {
+      left: 0;
+      top: 0;
+      width: 70%;
+      height: 100%;
+      transform: translate(0, 0);
+    }
+  }
+
+  &--PatternRight,
+  &--PatternLeft,
+  &--PatternEdge {
+    position: relative;
+    overflow: hidden !important;
+
+    &::after {
+      pointer-events: none;
+      content: "";
+      position: absolute;
+      width: 90%;
+      height: 90%;
+      z-index: -1;
+      bottom: 0;
+
+      @media (max-width: $mmd) {
+        height: 60%;
+        width: 50%;
+      }
+    }
+  }
+
+  &--PatternLeft {
+    &::after {
+      width: 100%;
+      height: 70%;
+      z-index: -1;
+      bottom: 20%;
+      left: 10%;
+      background: url("../images/Urbanest/PatternCenter.svg") no-repeat center
+        left;
+      background-size: contain;
+    }
+  }
+
+  &--PatternRight {
+    &::after {
+      width: 100%;
+      height: 70%;
+      z-index: -1;
+      bottom: 20%;
+      right: 10%;
+      background: url("../images/Urbanest/PatternCenter.svg") no-repeat center
+        right;
+      background-size: contain;
+    }
+  }
+
+  &--PatternEdge {
+    &::after {
+      z-index: 0;
+      transform: translateY(-440px);
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: url("../images/Urbanest/PatternRight.svg") no-repeat center
+        right;
+    }
+  }
+
+  &--HrGrassPattern {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      bottom: 0;
+      height: 70px;
+      width: 100%;
+      right: 0;
+      left: 0;
+      background: url("../images/Common/HrGrassPattern.svg") no-repeat;
+    }
+  }
+
+  &--PatternBottom {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      bottom: 0;
+      height: 100vh;
+      width: 100%;
+      left: 0;
+      background: url("../images/Common/ContactUsPattern.svg") no-repeat;
+      top: 40%;
+
+      @media (max-width: $mmd) {
+        height: 100vh;
+      }
+    }
+  }
+}
+
+// imagePatch
+.imagePatch {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.text-orange {
+  color: $orange !important;
+
+  &:hover {
+    color: $black !important;
+
+    svg path {
+      fill: $black !important;
+    }
+  }
+
+  svg path {
+    fill: $orange !important;
+  }
+}
+
+.text-black {
+  color: $black !important;
+}
+
+.MdWhite {
+  @media (min-width: $md) {
+    color: $white;
+  }
+}
+
+// BUTTON
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show > .btn-primary.dropdown-toggle:focus,
+.form-control.is-valid,
+.was-validated .form-control:valid {
+  box-shadow: none;
+}
+
+.btn-primary.focus,
+.btn-primary:focus,
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle {
+  color: $white;
+  background-color: $black;
+  border-color: $black;
+  box-shadow: none;
+  outline: none;
+}
+
+.btn {
+  font-weight: $fw600;
+  font-size: 16px;
+  line-height: 26px;
+  padding: 16px 48px;
+  border: 1px solid $black;
+  transition: $transition6;
+
+  @media (max-width: $mmd) {
+    padding: 10px 16px;
+  }
+
+  &--submit {
+    background: $black;
+    border-radius: 8px;
+    color: $orange;
+
+    &:hover,
+    &:focus {
+      background: $orange;
+      border: 1px solid $orange;
+      transition: $transition6;
+      color: $black;
+    }
+  }
+}
+
+// C
+.ZIndexPosRel {
+  z-index: 1;
+  position: relative;
+}
+
+.max-width-380 {
+  @media (min-width: $mmd) {
+    max-width: 380px;
+  }
+}
+
+// MASTER PALA SPACES - HEADING DOWNLOAD OPTION
+
+.-only-sm {
+  @media (max-width: $md) {
+    width: 123px;
+    text-align: left;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.UrbanestLogo {
+  @media (max-width: $md) {
+    width: 200px;
+    object-fit: contain;
+  }
+}

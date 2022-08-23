@@ -1,0 +1,17 @@
+@import "../../../styles/variables";
+
+.ProjectAtGlance {
+  &__info {
+    font-weight: $fw700;
+    text-transform: capitalize;
+  }
+
+  &__desc {
+    font-weight: $fw100;
+
+    @media (min-width: $md) {
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+}
